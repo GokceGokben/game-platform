@@ -14,14 +14,14 @@ const translationsMap: Record<Language, Translations> = {
   tr: {
     pageTitle: "Oyun Portfolyom",
     pageSubtitle:
-      "Kendi tasarladığım ve geliştirdiğim oyunları keşfet. Her biri farklı bir meydan okuma sunuyor.",
+      "Özenle tasarlanan ve geliştirilen oyunları keşfet. Her biri farklı bir meydan okuma sunuyor.",
     playButton: "Oyunu Oyna",
     gamesLabel: "Oyunlar",
   },
   en: {
     pageTitle: "My Game Portfolio",
     pageSubtitle:
-      "Explore games I designed and developed from scratch. Each one offers a unique challenge.",
+      "Explore games that are designed and developed delicately. Each one offers a unique challenge.",
     playButton: "Play Game",
     gamesLabel: "Games",
   },

@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -42,13 +41,11 @@ export function GameCard({ game, lang, translations }: GameCardProps) {
     >
       {/* Thumbnail / Video */}
       <div className="relative overflow-hidden h-80 bg-muted">
-        {/* Next/Image handles basePath automatically */}
-        <Image
-          src={game.imageUrl}
+        <img
+          src={`${BASE}${game.imageUrl}`}
           alt={game.title}
-          fill
           className={cn(
-            "object-cover transition-all duration-500 group-hover:scale-105",
+            "h-full w-full object-cover transition-all duration-500 group-hover:scale-105",
             game.hoverVideoUrl && "group-hover:opacity-0"
           )}
         />
