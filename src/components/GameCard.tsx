@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -13,6 +14,8 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { GameCardProps } from "@/types/game";
 import { translateTag } from "@/data/tagTranslations";
+
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function GameCard({ game, lang, translations }: GameCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -39,21 +42,22 @@ export function GameCard({ game, lang, translations }: GameCardProps) {
     >
       {/* Thumbnail / Video */}
       <div className="relative overflow-hidden h-80 bg-muted">
-        {/* Static thumbnail — always rendered */}
-        <img
+        {/* Next/Image handles basePath automatically */}
+        <Image
           src={game.imageUrl}
           alt={game.title}
+          fill
           className={cn(
-            "h-full w-full object-cover transition-all duration-500 group-hover:scale-105",
+            "object-cover transition-all duration-500 group-hover:scale-105",
             game.hoverVideoUrl && "group-hover:opacity-0"
           )}
         />
 
-        {/* Hover video — only rendered if provided */}
+        {/* Hover video — basePath prepended manually */}
         {game.hoverVideoUrl && (
           <video
             ref={videoRef}
-            src={game.hoverVideoUrl}
+            src={`${BASE}${game.hoverVideoUrl}`}
             muted
             playsInline
             loop
