@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
+  basePath: "/game-platform",
+  images: {
+    unoptimized: true,
+  },
   turbopack: {
     root: __dirname,
   },
