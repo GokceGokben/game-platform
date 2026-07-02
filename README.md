@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing games developed by Gökçe Gökben and Umut Arda Tansever.
 
-Live demo: _coming soon_
+Live demo: https://gokcegokben.github.io/game-platform/
 
 ---
 
