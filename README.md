@@ -80,25 +80,6 @@ npm start
 
 ---
 
-## Adding a New Game
-
-1. Create `public/games/<game-id>/` and place `thumbnail.png` (and optionally `hover.mp4`) inside.
-2. Add a new entry to `src/data/gamesData.ts`:
-
-```ts
-{
-  id: "game-id",
-  title: "Game Title",
-  description: {
-    tr: "Türkçe açıklama.",
-    en: "English description.",
-  },
-  url: "https://username.github.io/game/",
-  imageUrl: "/games/game-id/thumbnail.png",
-  hoverVideoUrl: "/games/game-id/hover.mp4", // optional
-  tags: ["Action", "Arcade"],
-}
-```
 
 3. If you introduce a new tag, add its translation to `src/data/tagTranslations.ts`.
 
