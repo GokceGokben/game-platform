@@ -1,4 +1,4 @@
-# Game Platform
+#Our Game Platform
 
 A modern, responsive portfolio website showcasing games developed by Gökçe Gökben and Umut Arda Tansever.
 
